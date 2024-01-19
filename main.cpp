@@ -1,13 +1,13 @@
 #include <iostream>
+#include <vector>
+#include <string>
+#include "Mlib.h"
 
 
-int main(){
-    int a = 2;
-    int b= 30;
-
-    int c = a + b;
-
-    std::cout << c << std::endl;
-
+int main(int argc, char** argv){
+    std::string contents = mlib_read_file("./main.cpp");
+    
+    std::string args = mlib_get_args(argc, argv);
+    std::cout << "Geto  are: " << args << std::endl;
     return 0;
 }
